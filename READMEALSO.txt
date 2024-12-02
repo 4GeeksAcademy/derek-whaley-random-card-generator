@@ -1,0 +1,4 @@
+I added a timer that changes the card every 10 seconds but was having trouble getting it to display on screen so I'm just leaving it here for now, lol. Also, I'm not sure if it's an issue on my end, I'll have to ask about it sometime. Whenever I run the 
+"npm run start" or "npm start" command in the console it displays the webpage but is always just a broken version. For example, with this project when I run that command in terminal it just displays a blank white page with a small number, suit, and new card
+button in the top left corner. However, when I download the html, css, and js then run the index.html file to display the page, everything comes up great and as it should. I even tried running the same command with the solution code just to see if it would 
+work and it had the same issue.

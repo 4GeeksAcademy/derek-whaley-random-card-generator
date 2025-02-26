@@ -1,3 +1,5 @@
+import "./styles.css";
+
 const generateRandomCard = () => {
   const suits = ["hearts", "spades", "diamonds", "clubs"];
   const values = [
@@ -30,20 +32,17 @@ const generateRandomCard = () => {
   document.getElementById("bottom-suit").textContent = suitSymbols[randomSuit];
   document.getElementById("card-value").textContent = randomValue;
 
-  const suitsToRemove = ["hearts", "spades", "diamonds", "clubs"];
-  document.getElementById("top-suit").classList.remove(...suitsToRemove);
-  document.getElementById("bottom-suit").classList.remove(...suitsToRemove);
-  document.getElementById("card-value").classList.remove(...suitsToRemove);
-
-  document.getElementById("top-suit").classList.add(randomSuit);
-  document.getElementById("bottom-suit").classList.add(randomSuit);
-  document.getElementById("card-value").classList.add(randomSuit);
+  document.getElementById("top-suit").className = `top-suit ${randomSuit}`;
+  document.getElementById(
+    "bottom-suit"
+  ).className = `bottom-suit ${randomSuit}`;
+  document.getElementById("card-value").className = `card-value ${randomSuit}`;
 };
 
 document
   .getElementById("new-card-btn")
   .addEventListener("click", generateRandomCard);
 
-setInterval(generateRandomCard, 10000);
+setInterval(generateRandomCard, 5000);
 
 window.onload = generateRandomCard;
